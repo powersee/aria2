@@ -45,11 +45,11 @@ function setting(){
 	sed -i "s/rpc-secret=/#rpc-secret=/g" /data/aria2/aria2.conf
 	sed -i "s/#rpc-user=/rpc-user=${user}/g" /data/aria2/aria2.conf
 	sed -i "s/#rpc-passwd=/rpc-passwd=${pass}/g" /data/aria2/aria2.conf
-	#下载yaaw
-	wget -P /data/aria2 https://github.com/helloxz/yaaw/archive/master.zip
+	#下载yaaw改为aria-ng
+	wget -P /data/aria2 https://github.com/mayswind/AriaNg/releases/download/0.4.0/aria-ng-0.4.0.zip
 	cd /data/aria2
-	unzip master.zip
-	mv yaaw-master/* ./
+	unzip aria-ng-0.4.0.zip
+	
 	
 	#下载caddy server
 	wget http://soft.xiaoz.org/linux/caddy.filemanager -O caddy && mv caddy /usr/bin/
